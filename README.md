@@ -21,10 +21,10 @@ Feature: Header menu navigation tests
 
 precondition                            | step                             | expected result                                                                                                                                                               |
 ----------------------------------------| ---------------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-Omada homepage https://www.omada.net is opened | Go to the navigation header menu/main tab section | there are 5 main tabs in navigation header menu. tabs are located at the middle top of the webpage; Tab names are as follows: <br/> -"Solutions" <br/>-"Business Value" <br/>-"Services" <br/>-"Industries" <br/>-"More" |
+Omada homepage https://www.omada.net is opened | Go to the navigation header menu/main tab section | There are 5 main tabs in navigation header menu. Tabs are located at the middle top of the webpage; Tab names are as follows: <br/> -"Solutions" <br/>-"Business Value" <br/>-"Services" <br/>-"Industries" <br/>-"More" |
   | Hover the mouse on each tab separately | Each tab is active and while hovering the mouse on single tab the drop down menu appears |
    | Hover the mouse outside the modal(tab name) | The drop down menu closes when user hover the mouse outside the modal (tab name) |
-   Items selected to check: "Solutions" (links: "Solution Overview", "Microsoft Azure") "Services" (links: "Risk Assessment", "Academy Overview") "More" (links: "Company", "Jobs") | Activate chosen tabs, one by one and check if they contains active menus | Each drop down menu contains the list of active drill downs that were built to re-direct user to another (separate) page  | 
+   Items selected to check: <br/> "Solutions" tab (links: "Solution Overview", "Microsoft Azure") <br/>"Services" tab (links: "Risk Assessment", "Academy Overview") <br/>"More" tab (links: "Company", "Jobs") | Activate chosen tabs, one by one and check if they contain active menus | Each drop down menu contains the list of active drill downs that were built to re-direct user to another (separate) page  | 
      | Click on each link that have been provided on the test case above | Each of the tested links is responsive and after being clicked by the user opens another(new) webpage|
 
 
