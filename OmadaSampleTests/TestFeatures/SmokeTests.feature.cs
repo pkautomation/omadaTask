@@ -79,6 +79,25 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Check if the privacy policy site is reachable")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        public virtual void CheckIfThePrivacyPolicySiteIsReachable()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if the privacy policy site is reachable", new string[] {
+                        "Smoke"});
+#line 32
+this.ScenarioSetup(scenarioInfo);
+#line 33
+ testRunner.When("I open Omada home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
+ testRunner.And("I click on privacy policy link from the footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.Then("I can see Website Privacy Policy document", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

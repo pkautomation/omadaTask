@@ -37,8 +37,8 @@ namespace OmadaSampleTestsProject.StepDefinitions
         private readonly ScenarioContext scenarioContext;
 
         private HomePage homePage;
-
-
+        private PrivacyPolicyPage privacyPolicyPage;
+        
         public SmokeTestsSteps(ScenarioContext scenarioContext)
         {
             if (scenarioContext == null)
@@ -64,5 +64,20 @@ namespace OmadaSampleTestsProject.StepDefinitions
             Assert.IsTrue(driverContext.Driver.IsElementPresent(homePage.footerSection, (double)Timeouts.Long), "Footer section not displayed");
             Assert.IsTrue(driverContext.Driver.IsElementPresent(homePage.searchBar, (double)Timeouts.Long), "Search bar not displayed");
         }
+
+        [When(@"I click on privacy policy link from the footer")]
+        public void WhenIClickOnPrivacyPolicyLinkFromTheFooter()
+        {
+             privacyPolicyPage = homePage.ClickPrivacyPolicyLink();
+        }
+
+        [Then(@"I can see Website Privacy Policy document")]
+        public void ThenICanSeeWebsitePrivacyPolicyDocument()
+        {
+            var title = privacyPolicyPage.GetTitle();
+
+            StringAssert.Contains("WEBSITE PRIVACY POLICY", title);
+        }
+
     }
 }

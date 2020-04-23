@@ -36,7 +36,8 @@ namespace OmadaSampleTestsProject.PageObjects
         public readonly ElementLocator cookieCloseBtn = new ElementLocator(Locator.CssSelector, "[data-init='cookiebar'] span");
         public readonly ElementLocator topNavigationSection = new ElementLocator(Locator.CssSelector, "[data-init='top-navigation']");
         public readonly ElementLocator footerSection = new ElementLocator(Locator.CssSelector, "[data-init='footer']");
-        public readonly ElementLocator searchBar = new ElementLocator(Locator.CssSelector, ".header__search");
+        public readonly ElementLocator searchBar = new ElementLocator(Locator.CssSelector, ".header__column--search [placeholder='Search']");
+        public readonly ElementLocator privacyPolicyLink = new ElementLocator(Locator.XPath, "//li/a[contains(text(),'Privacy Policy')]");
 
         public HomePage(DriverContext driverContext)
             : base(driverContext)
@@ -56,6 +57,22 @@ namespace OmadaSampleTestsProject.PageObjects
             CloseCookieBar();
 
             return this;
+        }
+
+        public PrivacyPolicyPage ClickPrivacyPolicyLink()
+        {
+            Driver.GetElement(privacyPolicyLink).Click();
+
+            return new PrivacyPolicyPage(DriverContext);
+        }
+
+        public SearchResultsPage SearchForArticle(string phrase)
+        {
+            Driver.GetElement(searchBar).Click();
+            Driver.GetElement(searchBar).SendKeys(phrase);
+            Driver.GetElement(searchBar).Submit();
+
+            return new SearchResultsPage(DriverContext);
         }
     }
 }
