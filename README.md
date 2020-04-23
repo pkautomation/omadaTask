@@ -1,11 +1,11 @@
 # omadaTask
 
-I have created sample tests using .Net 4.8 with Ocaramba selenium wrapper and Specflow to support BDD.
+I have created sample tests using .Net 4.8 with Ocaramba selenium wrapper and Specflow to support BDD. The solution supports Chrome and Firefox browsers. All what is needed to do is a change of a "browser" key in app.config file. I picked those browsers since from my experience they are stable and popular, but in terms of cross-browser testing I would check probably how the site works on IE11 and Safari(i.e. by using Browserstack that Ocaramba is compatible with).
 
 Three tests are automated and one only in a halfway due to captcha 
-that should be disabled for automated tests i.e. on test environment
+that should be disabled for automated tests i.e. on test environment.
 
-The documentation for the above is in a form of .feature files in /TestFeatures directory
+The documentation for the above is in a form of .feature files in /TestFeatures directory.
 
 Other test scenarios(which should be placed in test management tool i.e. Microsoft Test Manager):
 
