@@ -63,12 +63,28 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Common\Enums\Timeouts.cs" />
-    <Compile Include="Common\HelperMethods.cs" />
+    <Compile Include="Common\Models\BrochureFormInfo.cs" />
+    <Compile Include="PageObjects\DownloadBrochurePage.cs" />
+    <Compile Include="PageObjects\PrivacyPolicyPage.cs" />
+    <Compile Include="PageObjects\PartnersPage.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
+    <Compile Include="PageObjects\SearchResultsPage.cs" />
     <Compile Include="ProjectPageBase.cs" />
     <Compile Include="ProjectTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\MainPageSearchBarSteps.cs" />
+    <Compile Include="StepDefinitions\PartnersSteps.cs" />
     <Compile Include="StepDefinitions\SmokeTestsSteps.cs" />
+    <Compile Include="TestFeatures\MainPageSearchBar.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainPageSearchBar.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestFeatures\Partners.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Partners.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestFeatures\SmokeTests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +93,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="TestFeatures\MainPageSearchBar.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MainPageSearchBar.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestFeatures\Partners.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Partners.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestFeatures\SmokeTests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SmokeTests.feature.cs</LastGenOutput>

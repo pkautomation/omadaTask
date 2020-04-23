@@ -27,3 +27,9 @@ Feature: SmokeTests
 Scenario: Check if the main page is alive
 	When I open Omada home page
 	Then I can see basic home page components
+
+@Smoke
+Scenario: Check if the privacy policy site is reachable
+	When I open Omada home page
+	And  I click on privacy policy link from the footer
+	Then I can see Website Privacy Policy document
