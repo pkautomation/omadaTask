@@ -7,14 +7,14 @@ that should be disabled for automated tests i.e. on test environment.
 
 The documentation for the above is in a form of .feature files in /TestFeatures directory.
 
-Other test scenarios(which should be placed in test management tool i.e. Microsoft Test Manager):
+Other example test scenario(which should be placed in test management tool i.e. Microsoft Test Manager):
 
 Feature: Contact information
 | step                             | expected result                           |
 | ---------------------------------| ------------------------------------------|
 | Open home page                   | home page openened                        |
-| Click on "Contact" in a top bar  | contact site contains address information for Headquarters by default. There is google map visible pointing the office location. Right below there is contact form  |
-
+| Click on "Contact" in a top bar  | contact site contains address information for Headquarters by default. There is google map visible pointing the office location. Right below there is contact form. There are tabs of other countries |
+Go through each country tab and check if address information are there | each tab contains address information to the office in this country. Each region has google map attached |
 
 # Test cases choice justification
 
