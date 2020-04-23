@@ -7,7 +7,7 @@ that should be disabled for automated tests i.e. on test environment.
 
 The documentation for the above is in a form of .feature files in /TestFeatures directory.
 
-Other example test scenario(which should be placed in test management tool i.e. Microsoft Test Manager):
+Other example test scenarios(which should be placed in test management tool i.e. Microsoft Test Manager):
 
 Feature: Contact information
 
